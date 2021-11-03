@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Search for a bankrupt and disqualified officer
+{% endblock %}
+
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/user-bar.html" %}
+    <h1 class="govuk-heading-l">
+      Search for a payment
+    </h1>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="psp-ref">
+        PSP reference
+      </label>
+
+      <input class="govuk-input govuk-!-width-one-half" id="psp-ref" name="psp-ref" type="text" aria-describedby="psp-ref-hint">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="shopper-email">
+        Shopper email
+      </label>
+
+      <input class="govuk-input govuk-!-width-one-half" id="shopper-email" name="shopper-email" type="text" aria-describedby="shopper-email-hint">
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint">
+        <label class="govuk-label" for="shopper-name">
+          Shopper name
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="shopper-name" name="shopper-name" type="text" aria-describedby="shopper-name-hint">
+</div>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="card-number-hint">
+    <legend class="govuk-fieldset__legend">
+      Card number
+    </legend>
+
+    <div class="govuk-date-input" id="card-number">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="issuer-id">
+            Issuer ID
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-6" id="issuer-id" name="issuer-id" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="shopper-pan">
+            Shopper PAN
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="shopper-pan" name="shopper-pan" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      </div>
+  </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="ip-address">
+          IP address
+        </label>
+
+        <input class="govuk-input govuk-!-width-one-half" id="ip-address" name="ip-address" type="text" aria-describedby="ip-address-hint">
+      </div>
+
+      <a href="list-officers" role="button" draggable="false" class="govuk-button">
+        Search
+      </a>
+    </div>
+
+  {% endblock %}

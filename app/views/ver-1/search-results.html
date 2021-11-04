@@ -1,0 +1,262 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  View payment search results
+{% endblock %}
+
+{% block beforeContent %}
+  <ul id="navigation" class="mobile-hidden">
+    <li class="user" id="signed-in-user">user@companieshouse.gov.uk
+    </li>
+    <li>
+      <a href="/account/login" id="user-signout">Sign out</a>
+    </li>
+
+  </ul>
+  <a class="govuk-back-link" href="/ver-1/search">Back to search</a>
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Search results
+  </h1>
+  <h2 class="govuk-heading-m">
+    for "Shopper email: user@companieshouse.gov.uk"
+    </h2>
+
+  <span id="results-hint" class="govuk-hint">
+    Showing 2 of 2 results
+  </span>
+  <div class="govuk-grid-column-half-width">
+    {{ govukTable({
+
+      firstCellIsHeader: false,
+      class:sortable,
+      head: [
+      {
+      text: "PSP reference"
+      },
+      {
+      text: "Merchant reference"
+      },
+      {
+      text: "Payment method"
+      },
+      {
+      text: "Creation date"
+      },
+      {
+      text: "Time zone"
+      },
+      {
+      text: "Currency"
+      },
+      {
+      text: "Amount"
+      },
+      {
+      text: "Shopper name"
+      },
+      {
+      text: "Shopper PAN"
+      },
+      {
+      text: "Shopper IP"
+      },
+      {
+      text: "Shopper country"
+      },
+      {
+      text: "Issuer name"
+      },
+      {
+      text: "Issuer ID"
+      },
+      {
+      text: "Issuer city"
+      },
+      {
+      text: "Acquirer response"
+      },
+      {
+      text: "Authorisation code"
+      },
+      {
+      text: "Shopper email"
+      },
+      {
+      text: "Billing street"
+      },
+      {
+      text: "Billing house number"
+      },
+      {
+      text: "Billing city"
+      },
+      {
+      text: "Billing postal code / zip code"
+      },
+      {
+      text: "Billing state / province"
+      },
+      {
+      text: "Billing country"
+      }
+
+      ],
+      rows: [
+  [
+      {
+      text: "XXXXXXXX"
+      },
+      {
+      text: "XXXXXXXX"
+      },
+      {
+      text: "Debit card"
+      },
+      {
+      text: "10/10/2021"
+    },
+    {
+    text: "BST +0"
+  },
+  {
+  text: "GBP"
+},
+{
+text: "£13.00"
+},
+{
+text: "Jane Doe"
+},
+{
+text: "XXXXXX-XXXX"
+},
+{
+text: "192.0.2.1"
+},
+{
+text: "United Kingdom"
+},
+{
+text: "NatWest"
+},
+{
+text: "601010"
+},
+{
+text: "London"
+},
+{
+text: "United Kingdom"
+},
+{
+text: "XXXXXXXX"
+},
+{
+text: "XXXXXXXX"
+},
+{
+text: "user@companieshouse.gov.uk"
+},
+{
+text: "Crown Way"
+},
+{
+text: "36"
+},
+{
+text: "Cardiff"
+},
+{
+text: "CF14 3UZ"
+},
+{
+text: "Cardiff"
+},
+{
+text: "United Kingdom"
+}
+],
+[
+{
+text: "XXXXXXXX"
+},
+{
+text: "XXXXXXXX"
+},
+{
+text: "Debit card"
+},
+{
+text: "11/10/2021"
+},
+{
+text: "BST +0"
+},
+{
+text: "GBP"
+},
+{
+text: "£13.00"
+},
+{
+text: "Jane Doe"
+},
+{
+text: "XXXXXX-XXXX"
+},
+{
+text: "192.0.2.1"
+},
+{
+text: "United Kingdom"
+},
+{
+text: "NatWest"
+},
+{
+text: "601010"
+},
+{
+text: "London"
+},
+{
+text: "United Kingdom"
+},
+{
+text: "XXXXXXXX"
+},
+{
+text: "XXXXXXXX"
+},
+{
+text: "user@companieshouse.gov.uk"
+},
+{
+text: "Crown Way"
+},
+{
+text: "36"
+},
+{
+text: "Cardiff"
+},
+{
+text: "CF14 3UZ"
+},
+{
+text: "Cardiff"
+},
+{
+text: "United Kingdom"
+}
+]
+]
+
+      }) }}
+
+  </div>
+
+{% endblock %}

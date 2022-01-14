@@ -34,9 +34,63 @@
 </div>
 
 
-      <a href="search-and-results" role="button" draggable="false" class="govuk-button">
+      <a href="search-and-no-results" role="button" draggable="false" class="govuk-button">
         Search
       </a>
-    </div>
 
+
+    <h1 class="govuk-heading-l">
+      Search results
+    </h1>
+    <h2 class="govuk-heading-m">
+      for "Email: test@test.com"
+      </h2>
+
+    <span id="results-hint" class="govuk-hint">
+      Showing 2 of 2 results
+    </span>
+    <div>
+      {{ govukTable({
+
+        firstCellIsHeader: false,
+        class:sortable,
+        head: [
+        {
+        text: "Order number"
+        },
+        {
+        text: "Email"
+        },
+        {
+        text: "Company number"
+        }
+        ],
+        rows: [
+    [
+        {
+        text: "000000001"
+        },
+        {
+        text: "test@test.com"
+        },
+        {
+        text: "00345567"
+        }
+    ],
+    [
+    {
+    text: "000000002"
+    },
+    {
+    text: "test@test.com"
+    },
+    {
+    text: "00345567"
+    }
+    ]
+    ]
+
+        }) }}
+        </div>
+            </div>
   {% endblock %}

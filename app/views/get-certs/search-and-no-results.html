@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Search for a payment
+{% endblock %}
+
+{% block main %}
+
+  <div class="govuk-width-container">
+    {% include "includes/user-bar.html" %}
+    <h1 class="govuk-heading-l">
+      Search for an order
+    </h1>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="order-number">
+        Order number
+      </label>
+
+      <input class="govuk-input govuk-!-width-one-half" id="order-number" name="order-number" type="text" aria-describedby="order-number-hint">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="email">
+        Email
+      </label>
+
+      <input class="govuk-input govuk-!-width-one-half" id="email" name="email" type="text" aria-describedby="email-hint">
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="company-number-hint">
+        <label class="govuk-label" for="company-number">
+          Company number
+        </label>
+        <input class="govuk-input govuk-!-width-one-half" id="company-number" name="company-number" type="text" aria-describedby="company-number-hint">
+</div>
+
+
+      <a href="search" role="button" draggable="false" class="govuk-button">
+        Search
+      </a>
+
+
+      <h1 class="govuk-heading-l">
+        Search results
+      </h1>
+      <h2 class="govuk-heading-m">
+        for "Email: test@test.co.uk"
+        </h2>
+
+      <p>No matches found</p>
+        </div>
+            </div>
+  {% endblock %}

@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Certificate ordering search - GOV.UK
+{% endblock %}
+{% block beforeContent %}
+<ul id="navigation" class="mobile-hidden">
+  <li class="user" id="signed-in-user">test@test.com
+  </li>
+  <li>
+    <a href="/account/login" id="user-signout">Sign out</a>
+  </li>
+  </ul>
+
+  <a class="govuk-back-link" href="/get-certs/search">Back to search</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+    <div class="govuk-grid-row">
+
+      <div class="govuk-grid-column-full">
+
+        <h1 class="govuk-heading-l">Certificate ordering search</h1>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+
+        <div class="govuk-grid-column-one-third" style="padding-top: govuk-spacing(3)">
+
+
+        <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Update results
+            </button>
+
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Clear search
+            </button>
+        </div>
+
+        {{ govukAccordion({
+          id: "accordion-default",
+
+          items: [
+            {
+              heading: {
+                text: "Order number"
+              },
+              content: {
+                html: "
+
+               <div class='govuk-form-group' style='padding-bottom:10px;'>
+
+                    <input class='govuk-input' id='order-number' name='order-number' type='text'>
+                  </div>"
+
+              }
+            },
+              {
+              heading: {
+                text: "Email"
+              },
+              content: {
+                html: '<fieldset class="govuk-fieldset">
+
+                          <div class="govuk-form-group">
+
+<input class="govuk-input" id="email" name="email" type="text">
+                          </div>
+
+                        </fieldset>'
+              }
+            },
+            {
+              heading: {
+                text: "Company number"
+              },
+              content: {
+                html: '<fieldset class="govuk-fieldset">
+
+                          <div class="govuk-form-group">
+
+<input class="govuk-input" id="company-number" name="company-number" type="text">
+                          </div>
+
+                        </fieldset>'
+}
+
+            }
+          ]
+        }) }}
+
+        <div class="govuk-button-group">
+            <button class="govuk-button" data-module="govuk-button">
+              Update results
+            </button>
+
+            <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Clear search
+            </button>
+        </div>
+</div>
+
+    <div class="govuk-grid-column-two-thirds" style="padding-top: 45px; justify-content: flex-end;">
+
+        <h2 class="govuk-heading-m" style="margin-bottom: 3px;"><a href="#" class="govuk-link govuk-link--no-underline">000000001</a></h2>
+        <p style="padding-bottom: 10px; margin-top:0px;" >
+        test@test.com <br>
+        18882777</p>
+
+
+
+        <h2 class="govuk-heading-m" style="margin-bottom: 3px;"><a href="#" class="govuk-link govuk-link--no-underline">000000002</a></h2>
+        <p style="padding-bottom: 10px; margin-top:0px;" >
+
+        test@test.com <br>
+        18882777</p>
+
+
+
+
+        <h2 class="govuk-heading-m" style="margin-bottom: 3px;"><a href="#" class="govuk-link govuk-link--no-underline">000000003</a></h2>
+        <p style="padding-bottom: 10px; margin-top:0px;" >
+
+        test@test.com <br>
+        18882777</p>
+
+
+
+            </div>
+</div>
+
+</div>
+
+
+
+
+{% endblock %}

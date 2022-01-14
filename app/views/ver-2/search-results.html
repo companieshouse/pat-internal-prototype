@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  View payment search results
+{% endblock %}
+
+{% block beforeContent %}
+  <ul id="navigation" class="mobile-hidden">
+    <li class="user" id="signed-in-user">user@companieshouse.gov.uk
+    </li>
+    <li>
+      <a href="/account/login" id="user-signout">Sign out</a>
+    </li>
+
+  </ul>
+  <a class="govuk-back-link" href="/ver-1/search">Back to search</a>
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Search results
+  </h1>
+  <h2 class="govuk-heading-m">
+    for "Shopper email: user@companieshouse.gov.uk"
+    </h2>
+
+  <span id="results-hint" class="govuk-hint">
+    Showing 2 of 2 results
+  </span>
+  <div class="govuk-grid-column-half-width">
+    <table class="govuk-table">
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th colspan="5">Shopper</th>
+        <th colspan="3">Issuer</th>
+        <th></th>
+        <th></th>
+        <th colspan="6">Billing</th>
+      </tr>
+      <tr>
+        <th>PSP reference</th>
+        <th>Merchant reference</th>
+        <th>Payment method</th>
+        <th>Creation date</th>
+        <th>Time zone</th>
+        <th>Currency</th>
+        <th>Amount</th>
+        <th>name</th>
+        <th>PAN</th>
+        <th>IP</th>
+        <th>country</th>
+        <th>email</th>
+        <th>name</th>
+        <th>ID</th>
+        <th>city</th>
+        <th>Acquirer response</th>
+        <th>Authorisation code</th>
+        <th>street</th>
+        <th>house number</th>
+        <th>city</th>
+        <th>postal code / zip code</th>
+        <th>state / province</th>
+        <th>country</th>
+        <th></th>
+      </tr>
+      <tr>
+      </tr>
+    </table>
+
+  </div>
+
+{% endblock %}

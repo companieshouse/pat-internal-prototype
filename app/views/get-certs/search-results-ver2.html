@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  View payment search results
+{% endblock %}
+
+{% block beforeContent %}
+  <ul id="navigation" class="mobile-hidden">
+    <li class="user" id="signed-in-user">test@test.com
+    </li>
+    <li>
+      <a href="/account/login" id="user-signout">Sign out</a>
+    </li>
+
+  </ul>
+  <a class="govuk-back-link" href="/get-certs/search">Back to search</a>
+{% endblock %}
+{% block main %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Search results
+  </h1>
+  <h2 class="govuk-heading-m">
+    for "Email: test@test.com"
+    </h2>
+
+  <span id="results-hint" class="govuk-hint">
+    Showing 2 of 2 results
+  </span>
+  <div>
+    {{ govukTable({
+
+      firstCellIsHeader: false,
+      class:sortable,
+      head: [
+      {
+      text: "Order number"
+      },
+      {
+      text: "Email"
+      },
+      {
+      text: "Company number"
+      }
+      ],
+      rows: [
+  [
+      {
+      text: "000000001"
+      },
+      {
+      text: "test@test.com"
+      },
+      {
+      text: "00345567"
+      }
+],
+[
+{
+text: "000000002"
+},
+{
+text: "test@test.com"
+},
+{
+text: "00345567"
+}
+]
+]
+
+      }) }}
+
+  </div>
+
+{% endblock %}

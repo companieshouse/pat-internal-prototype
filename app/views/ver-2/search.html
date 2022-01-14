@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block pageTitle %}
-  Search for a bankrupt and disqualified officer
+  Search for a payment
 {% endblock %}
 
 {% block main %}
@@ -10,7 +10,7 @@
     <h1 class="govuk-heading-l">
       Search for a payment
     </h1>
-
+<p class=govuk-body-l>You can only search one field at a time</p>
     <div class="govuk-form-group">
       <label class="govuk-label" for="psp-ref">
         PSP reference
@@ -66,7 +66,36 @@
         <input class="govuk-input govuk-!-width-one-half" id="ip-address" name="ip-address" type="text" aria-describedby="ip-address-hint">
       </div>
 
-      <a href="list-officers" role="button" draggable="false" class="govuk-button">
+
+      {{ govukCheckboxes({
+        idPrefix: "optional",
+        name: "optional",
+        fieldset: {
+          legend: {
+            text: "Which fields would you like to see?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "carcasses",
+            text: "Waste from animal carcasses"
+          },
+          {
+            value: "mines",
+            text: "Waste from mines or quarries"
+          },
+          {
+            value: "farm",
+            text: "Farm or agricultural waste"
+          }
+        ]
+      }) }}
+      <a href="/ver-1/search-results" role="button" draggable="false" class="govuk-button">
         Search
       </a>
     </div>

@@ -1,0 +1,267 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  View payment search results
+{% endblock %}
+
+{% block beforeContent %}
+  <ul id="navigation" class="mobile-hidden">
+    <li class="user" id="signed-in-user">user@companieshouse.gov.uk
+    </li>
+    <li>
+      <a href="/account/login" id="user-signout">Sign out</a>
+    </li>
+
+  </ul>
+  <a class="govuk-back-link" href="/ver-1/search">Back to search</a>
+{% endblock %}
+{% block main %}
+  {{ super() }}
+{% endblock %}
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Search results
+  </h1>
+  <h2 class="govuk-heading-m">
+    for "Shopper email: user@companieshouse.gov.uk"
+    </h2>
+
+  <span id="results-hint" class="govuk-hint">
+    Showing 2 of 2 results
+  </span>
+  <div class="govuk-grid-column-half-width" style="overflow: scroll; height: 800px; width: 1000px; padding-left: 5px;">
+    {{ govukTable({
+
+      firstCellIsHeader: false,
+      class:sortable,
+      head: [
+      {
+      text: "PSP reference"
+      },
+      {
+      text: "Merchant reference"
+      },
+      {
+      text: "Payment method"
+      },
+      {
+      text: "Creation date"
+      },
+      {
+      text: "Time zone"
+      },
+      {
+      text: "Currency"
+      },
+      {
+      text: "Amount"
+      },
+      {
+      text: "Shopper name"
+      },
+      {
+      text: "Shopper PAN"
+      },
+      {
+      text: "Shopper IP"
+      },
+      {
+      text: "Shopper country"
+      },
+      {
+      text: "Issuer name"
+      },
+      {
+      text: "Issuer ID"
+      },
+      {
+      text: "Issuer city"
+      },
+      {
+      text: "Issuer country"
+      },
+      {
+      text: "Acquirer response"
+      },
+      {
+      text: "Authorisation code"
+      },
+      {
+      text: "Shopper email"
+      },
+      {
+      text: "Billing street"
+      },
+      {
+      text: "Billing house number"
+      },
+      {
+      text: "Billing city"
+      },
+      {
+      text: "Billing postal code / zip code"
+      },
+      {
+      text: "Billing state / province"
+      },
+      {
+      text: "Billing country"
+      }
+
+      ],
+      rows: [
+  [
+      {
+      text: "0000000000000000"
+      },
+      {
+      text: "00000000 | 000-000000 | 00000000"
+      },
+      {
+      text: "Visa"
+      },
+      {
+      text: "2021-10-31 17:58:58"
+    },
+    {
+    text: "BST"
+  },
+  {
+  text: "GBP"
+},
+{
+text: "13.00"
+},
+{
+text: "Jane Doe"
+},
+{
+text: "1234"
+},
+{
+text: "192.0.2.1"
+},
+{
+text: "GB"
+},
+{
+text: "NatWest"
+},
+{
+text: "601010"
+},
+{
+text: "London"
+},
+{
+text: "GB"
+},
+{
+text: "APPROVED"
+},
+{
+text: "A1234B"
+},
+{
+text: "user@companieshouse.gov.uk"
+},
+{
+text: "Crown Way"
+},
+{
+text: "36"
+},
+{
+text: "Cardiff"
+},
+{
+text: "CF14 3UZ"
+},
+{
+text: "Cardiff"
+},
+{
+text: "GB"
+}
+],
+[
+{
+text: "0000000000000000"
+},
+{
+text: "00000000 | 000-000000 | 00000000"
+},
+{
+text: "Visa"
+},
+{
+text: "2021-10-31 17:54:50"
+},
+{
+text: "BST"
+},
+{
+text: "GBP"
+},
+{
+text: "13.00"
+},
+{
+text: "Jane Doe"
+},
+{
+text: "1234"
+},
+{
+text: "192.0.2.1"
+},
+{
+text: "GB"
+},
+{
+text: "NatWest"
+},
+{
+text: "601010"
+},
+{
+text: "London"
+},
+{
+text: "GB"
+},
+{
+text: "DECLINED"
+},
+{
+text: "A1234B"
+},
+{
+text: "user@companieshouse.gov.uk"
+},
+{
+text: "Crown Way"
+},
+{
+text: "36"
+},
+{
+text: "Cardiff"
+},
+{
+text: "CF14 3UZ"
+},
+{
+text: "Cardiff"
+},
+{
+text: "GB"
+}
+]
+]
+
+      }) }}
+
+  </div>
+
+{% endblock %}

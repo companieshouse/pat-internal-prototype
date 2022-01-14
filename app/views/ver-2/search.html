@@ -66,6 +66,35 @@
         <input class="govuk-input govuk-!-width-one-half" id="ip-address" name="ip-address" type="text" aria-describedby="ip-address-hint">
       </div>
 
+
+      {{ govukCheckboxes({
+        idPrefix: "optional",
+        name: "optional",
+        fieldset: {
+          legend: {
+            text: "Which fields would you like to see?",
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: "Select all that apply."
+        },
+        items: [
+          {
+            value: "carcasses",
+            text: "Waste from animal carcasses"
+          },
+          {
+            value: "mines",
+            text: "Waste from mines or quarries"
+          },
+          {
+            value: "farm",
+            text: "Farm or agricultural waste"
+          }
+        ]
+      }) }}
       <a href="/ver-1/search-results" role="button" draggable="false" class="govuk-button">
         Search
       </a>

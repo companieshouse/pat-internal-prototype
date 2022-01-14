@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  View payment search results
+{% endblock %}
+
+{% block beforeContent %}
+  <ul id="navigation" class="mobile-hidden">
+    <li class="user" id="signed-in-user">user@companieshouse.gov.uk
+    </li>
+    <li>
+      <a href="/account/login" id="user-signout">Sign out</a>
+    </li>
+
+  </ul>
+  <a class="govuk-back-link" href="/ver-1/search">Back to search</a>
+{% endblock %}
+
+{% block content %}
+
+  <h1 class="govuk-heading-l">
+    Search results
+  </h1>
+  <h2 class="govuk-heading-m">
+    for "Email: test@test.co.uk"
+    </h2>
+
+  <p>No matches found</p>
+
+    <a href="search" role="button" draggable="false" class="govuk-button">
+      Back to search
+    </a>
+  </div>
+</div>
+
+</div>
+{% endblock %}

@@ -50,6 +50,7 @@
       Showing 2 of 2 results
     </span>
 
+<div>
       {{ govukTable({
 
         firstCellIsHeader: false,
@@ -76,7 +77,7 @@
         rows: [
     [
         {
-        html: '<a href="get-certs/ord-123456-123456">ORD-123456-123456</a>'
+        html: '<a href="/get-certs/ord-123456-123456">ORD-123456-123456</a>'
         },
         {
         text: "test@test.com"
@@ -96,7 +97,7 @@
     ],
     [
     {
-    html: '<a href="get-certs/ord-123456-123456">ORD-123456-123457</a>'
+    html: '<a href="/get-certs/ord-123456-123456">ORD-123456-123457</a>'
     },
     {
     text: "test@test.com"
@@ -117,6 +118,6 @@
     ]
 
         }) }}
-
+</div>
             </div>
   {% endblock %}

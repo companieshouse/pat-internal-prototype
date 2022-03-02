@@ -1,0 +1,147 @@
+{% extends "layout.html" %}
+{% block pageTitle %}
+  Search for a payment
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-width-container">
+    {% include "includes/user-bar.html" %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      ORD-123456-123457
+    </h1>
+    <h2 class="govuk-heading-l">
+      Order details
+    </h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Ordered by"
+          },
+          value: {
+            text: "test@test.com"
+          }
+        },
+        {
+          key: {
+            text: "Company name"
+          },
+          value: {
+            text: "TEST COMPANY LIMITED"
+          }
+        },
+        {
+          key: {
+            text: "Company number"
+          },
+          value: {
+            text: "00345567"
+          }
+        },
+        {
+          key: {
+            text: "Certificate type"
+          },
+          value: {
+            text: "Incorporation with all company name changes"
+          }
+        },
+        {
+          key: {
+            text: "Statement of good standing"
+          },
+          value: {
+            text: "Yes"
+          }
+        },
+        {
+          key: {
+            text: "Registered office address"
+          },
+          value: {
+            text: "No"
+          }
+        },
+        {
+          key: {
+            text: "The names of all current company directors"
+          },
+          value: {
+            text: "No"
+          }
+        },
+        {
+          key: {
+            text: "The names of all current secretaries"
+          },
+          value: {
+            text: "No"
+          }
+        },
+        {
+          key: {
+            text: "Company objects"
+          },
+          value: {
+            text: "No"
+          }
+        }
+      ]
+    }) }}
+    <h2 class="govuk-heading-l">
+      Delivery details
+    </h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Delivery method"
+          },
+          value: {
+            text: "Standard delivery (aim to dispatch within 10 working days)"
+          }
+        },
+        {
+          key: {
+            text: "Delivery details"
+          },
+          value: {
+            html: 'Barri Lang<br>16 Ridgeway Close<br>Newport<br>NP20 5DL<br>United Kingdom'
+          }
+        }
+      ]
+    }) }}
+    <h2 class="govuk-heading-l">
+      Payment details
+    </h2>
+
+    {{ govukSummaryList({
+      rows: [
+        {
+          key: {
+            text: "Payment reference"
+          },
+          value: {
+            text: "agubukDiUTXoc2B"
+          }
+        },
+        {
+          key: {
+            text: "Fee"
+          },
+          value: {
+            text: "£15"
+          }
+        }
+        ]
+    }) }}
+</div>
+    </div>
+    </div>
+
+  {% endblock %}
